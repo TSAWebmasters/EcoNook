@@ -1,0 +1,391 @@
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  font-family: "Rubik", sans-serif;
+  top: 0px;
+  left: 0px;
+  background-color: #28BB00;
+  color: white;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+}
+header h1 {
+  margin-left: 20px;
+}
+header div {
+  margin-right: 50px;
+  float: right;
+  list-style-type: none;
+}
+header div a {
+  color: white;
+  position: relative;
+  top: -45px;
+  font-weight: 200;
+  float: left;
+  margin-left: 50px;
+  text-decoration: none;
+}
+header a:hover {
+  animation: brighten 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes brighten {
+  0% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+#mainPage {
+  margin: auto;
+  position: relative;
+  color: black;
+  top: 100px;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+#mainPage h3 {
+  color: white;
+  animation: brighten 3s 1;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+}
+#mainPage h4 {
+  color: white;
+  animation: brighten 4s 1;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+  text-align: left;
+  width: 50%;
+}
+
+#fossilPage {
+  margin: auto;
+  position: relative;
+  color: white;
+  top: 100px;
+  animation: brighten 3s 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+#fossilPage h4 {
+  color: white;
+  animation: brighten 3s 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  text-align: left;
+  width: 50%;
+}
+#greenearthImage{
+  position: absolute;
+  top: 650px;
+  left: 800px;
+  display: flex;
+  animation: brighten 4s 1;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+}
+#fossilimage{
+  position: absolute;
+  top: 65px;
+  left: 650px;
+  display: flex;
+  animation: brighten 4s 1;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+}
+#RenewableImage{
+  position: absolute;
+  bottom:225px;
+  left: 50px;
+  display: flex;
+}
+
+#firstText {
+  animation: pop_in;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#secondText {
+  animation: pop_in;
+  animation-delay: 3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#thirdText {
+  animation: pop_in 1s 1;
+  animation-delay: 5s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pop_in {
+  0% {
+    font-size: 10px;
+    color: white;
+  }
+  100% {
+    font-size: 300%;
+    color: black;
+  }
+}
+.bodyDescription {
+  background-color: #1f7707;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  position: absolute;
+  top: 1000px;
+  left: 0px;
+  background-color: #1f7707;
+  width: 100%;
+  height: 800px;
+}
+.bodyDescription div {
+  float: right;
+  padding-right: 20px;
+  padding-top: 20px;
+  width: 300px;
+}
+.bodyDescription div h4 {
+  font-size: 60px;
+}
+
+.animateUp {
+  animation: upAnimation 1s 1;
+  position: relative;
+}
+
+@keyframes upAnimation {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+.energyCalculator {
+  color: #0f4600;
+  font-family: "Rubik", sans-serif;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  height: 800px;
+}
+.energyCalculator div {
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 300px;
+}
+.energyCalculator div h4 {
+  font-size: 60px;
+}
+.energyCalculator #calculator {
+  float: right;
+  padding-left: 20px;
+  padding-top: 100px;
+  width: 600px;
+  font-family: "Rubik", sans-serif;
+  color: #0f4600;
+}
+.energyCalculator #calculator h4 {
+  font-size: 60px;
+}
+.energyCalculator #calculator #mainTitle {
+  font-size: 60px;
+}
+.energyCalculator #calculator select {
+  margin-left: 20px;
+  padding: 0px 5px 0px 5px;
+  position: relative;
+  top: -10px;
+  border-radius: 20px;
+  border-color: #1f7707;
+  border-width: 2px;
+  font-family: "Rubik";
+  height: 50px;
+  width: 120px;
+}
+.energyCalculator #calculator input {
+  border-radius: 20px;
+  margin-top: 20px;
+  font-family: "Rubik", sans-serif;
+  width: 120px;
+  margin-left: 20px;
+}
+
+#solarHeader {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 100px;
+  font-family: "Rubik", sans-serif;
+  z-index: 50;
+  width: 40%;
+  top: 100px;
+  float: left;
+}
+#solarDescription {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 210px;
+  font-family: "Rubik", sans-serif;
+  z-index: 50;
+  width: 60%;
+  float: left;
+  opacity: 0;
+}
+#windDescription {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 210px;
+  font-family: "Rubik", sans-serif;
+  z-index: 50;
+  width: 60%;
+  float: left;
+  opacity: 0;
+text-align: right;
+left: 39%;
+}
+#hydroDescription {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 210px;
+  font-family: "Rubik", sans-serif;
+  z-index: 50;
+  text-align: center;
+  width: 60%;
+margin-left: 20%;
+  float: left;
+  opacity: 0;
+text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+#hydroHeader {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 100px;
+  text-align: center;
+  z-index: 50;
+  font-family: "Rubik", sans-serif;
+  margin-left: 35%;
+
+}
+#sourcesmain{
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 100px;
+  text-align: left;
+  z-index: 50;
+  font-family: "Rubik", sans-serif;
+
+}
+#windHeader {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 100px;
+  font-family: "Rubik", sans-serif;
+  z-index: 50;
+  right: 1px;
+}
+
+.energyImages {
+  width: 33%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0%;
+}
+
+.energyImages:hover {
+  animation: expand 1s 1;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+#solarImage {
+  left: 0%;
+}
+
+#hydroImage {
+  left: 33%;
+}
+
+#windImage {
+  left: 66%;
+  width: 34%;
+}
+
+@keyframes expand {
+  0% {
+    z-index: 10;
+  }
+  100% {
+    width: 40%;
+    z-index: 10;
+  }
+}
+@keyframes fullyExpand {
+  0% {
+    z-index: 10;
+    width: 40%;
+  }
+  100% {
+    width: 100%;
+    left: 0px;
+    z-index: 10;
+    cursor: default;
+  }
+}
+@keyframes enlargen {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    font-size: 4em;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    font-size: 4em;
+  }
+}
+@keyframes enlargenLeft {
+  0% {
+    float: right;
+    opacity: 0;
+  }
+  70% {
+    font-size: 4em;
+    float: right;
+    opacity: 0;
+  }
+  80% {
+    font-size: 4em;
+    float: right;
+    opacity: 0;
+  }
+  100% {
+    font-size: 4em;
+    float: right;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+    <meta chartset="utf-8">
+    
+    <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>EcoNook</title>
+            <link rel="stylesheet" href = "style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <header>
+                <h1>
+                    EcoNook
+                </h1>
+                <div>
+                    <a href = "about.html" class="pages">About</a>
+                    <a href = "energy.html"class="pages">Energy</a>
+                    <a href = "cost.html"class="pages">Cost</a>
+                    <a href = "practice.html"class="pages">Why are fossil fuels bad?</a>
+                    <a href = "sources.html"class="pages">Sources</a>
+                </div>
+            </header>
+            <div>
+                <img class="energyImages" id="solarImage"src="solar_panel.jpg" alt="Image of a solar panel" onclick='addClass("solarImage")'>
+                <img class="energyImages" id="hydroImage"src="hydro.jpg" alt="hydropowerImage" onclick='addClass("hydroImage")'>
+                <img class="energyImages" id="windImage"src="wind.jpg" alt="windTurbineImage" onclick='addClass("windImage")'>
+                    
+                        <h1 id="solarHeader">Solar Energy</h1>
+                   
+                        <h1 id="hydroHeader">Hydropower</h1>
+                   
+                        <h1 id="windHeader">Wind Energy</h1>
+                    
+                <div>
+                    <div id="solarDescription">
+                        <p>Solar energy is the process of taking radiation from the sun which can produce heat and causes a chemical reaction within solar panels which produces electricity.</p>
+    			<p>The total amount of solar energy able to be harnessed in the process exceeds the world’s current and anticipated energy requirements. If suitably harnessed, this highly widespread source has the potential to 			satisfy all future energy needs. Solar energy is said to become increasingly used as a green energy source for its unlimited supply and nonpolluting characteristics.</p>
+    			<p>Solar radiation is light – also known as electromagnetic radiation – that is emitted by the sun. While every location on Earth receives some sunlight over a year, the amount of solar radiation that reaches any 			one spot on the Earth’s surface varies. Solar technologies capture this radiation and turn it into useful forms of energy.</p>
+                        </div>
+                </div>
+		<div>
+                    <div id="windDescription">
+                        <p>Solar energy is the process of taking radiation from the sun which can produce heat and causes a chemical reaction within solar panels which produces electricity.</p>
+    			<p>The total amount of solar energy able to be harnessed in the process exceeds the world’s current and anticipated energy requirements. If suitably harnessed, this highly widespread source has the potential to 			satisfy all future energy needs. Solar energy is said to become increasingly used as a green energy source for its unlimited supply and nonpolluting characteristics.</p>
+    			<p>Solar radiation is light – also known as electromagnetic radiation – that is emitted by the sun. While every location on Earth receives some sunlight over a year, the amount of solar radiation that reaches any 			one spot on the Earth’s surface varies. Solar technologies capture this radiation and turn it into useful forms of energy.</p>
+                        </div>
+                </div>
+		<div>
+                    <div id="hydroDescription">
+                        <p>Solar energy is the process of taking radiation from the sun which can produce heat and causes a chemical reaction within solar panels which produces electricity.</p>
+    			<p>The total amount of solar energy able to be harnessed in the process exceeds the world’s current and anticipated energy requirements. If suitably harnessed, this highly widespread source has the potential to 			satisfy all future energy needs. Solar energy is said to become increasingly used as a green energy source for its unlimited supply and nonpolluting characteristics.</p>
+    			<p>Solar radiation is light – also known as electromagnetic radiation – that is emitted by the sun. While every location on Earth receives some sunlight over a year, the amount of solar radiation that reaches any 			one spot on the Earth’s surface varies. Solar technologies capture this radiation and turn it into useful forms of energy.</p>
+                        </div>
+                </div>
+                <script>
+                    function addClass(id){
+                        var image = document.getElementById(id);
+                        var solar = document.getElementById("solarHeader");
+                        var hydro = document.getElementById("hydroHeader");
+                        var wind = document.getElementById("windHeader");
+			var soolar = document.getElementById("solarDescription");
+			var hyydro = document.getElementById("hydroDescription");
+                        var wiind = document.getElementById("windDescription");
+
+                        image.style.animation='fullyExpand 1s 1';
+                        image.style.animationFillMode='forwards';
+                        image.style.cursor='default';
+                        if(id=="solarImage"){
+                            hydro.style.opacity=0;
+                            wind.style.opacity=0;
+                            solar.style.animation="enlargen 1s 1";
+                            solar.style.animationFillMode="forwards";
+			    soolar.style.opacity=1;
+
+                        } else if(id=="windImage"){
+                            solar.style.opacity=0;
+                            hydro.style.opacity=0;
+			    wind.style.color="white";
+                            wind.style.animation="enlargen 1s 1";
+                            wind.style.animationFillMode="forwards";
+			    wiind.style.opacity=1;
+                        } else{
+                            solar.style.opacity=0;
+                            wind.style.opacity=0;
+                            hydro.innerHTML="Hydropower"
+			    hydro.style.color = "white";
+			    hydro.style.textShadow = "1px 1px 2px black";
+                            hydro.style.animation="enlargenLeft 1s linear 1";
+                            hydro.style.animationFillMode="forwards";
+			    hyydro.style.opacity=1;
+
+                        }
+                    }
+                </script>
+
+            </div>
+            </div>
+        </body>
+    </html>

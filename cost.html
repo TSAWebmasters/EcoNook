@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <meta chartset="utf-8">
+    
+    <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Welcome to Energy Company</title>
+            <link rel="stylesheet" href = "style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <header>
+                <h1>
+                    Econook
+                </h1>
+                <div>
+                    <a href = "about.html" class="pages">About</a>
+                    <a href = "energy.html"class="pages">Energy</a>
+                    <a href = "cost.html"class="pages">Cost</a>
+                    <a href = "practice.html"class="pages">Why are fossil fuels bad?</a>
+                    <a href = "sources.html"class="pages">Sources</a>
+                </div>
+            </header>
+            <div class="energyCalculator">
+                <div>
+                 <h4 class="appearUp">Energy Calculator</h4>
+                 <p class="appearUp">Through determining your needs and greeds, this calculator will help you succeed.
+                    The tool will be worth a try, trust me I would never tell a lie. If you do deny, I will just ask
+                    you why?
+                 </p>
+                </div>
+                <div id = "calculator">
+                    
+                        <label for="energy"id="mainTitle">Energy Type </label>
+                        <select name="energy" id="energy" onclcik="switchEnergy()">
+                            <option value="solar">Solar Energy</option>
+                            <option value="wind">Wind Energy</option>
+                            <option value="hydro">Hydropower</option>
+                        </select>
+                        <br>
+                        <label for="wattage" id="wattageLabel">Wattage (kWh/month): </label>
+                        <input type="text" id="wattage" name="wattage">
+                        <br>
+                        <label for="sunHours">Sun hours: </label>
+                        <input type="text" id="sunHours" name="sunHours">
+                        <h5 style="font-size: 30px;">Choose your solar panel</h5>
+                        <label for="residental">Residental Solar Panel</label>
+                        <input type="radio" id="residental" name="residental" value="residental">
+                        <br>
+                        <label for="residental">SunPower  Solar Panel</label>
+                        <input type="radio" id="residental" name="residental" value="residental">
+                        <h5 style="font-size: 30px;">Cost for Panel</h5>
+                        <h6 id="answer"></h6>
+                        <br>
+                        <h6 id="numPanels"></h6>
+                        <input type="submit" onclick="calcCost()">
+                        
+    
+
+                        <script>
+                            function calcCost(){
+                            const choice = document.querySelectorAll('input[type="radio"]');
+                            var wattage = parseInt(document.getElementById("wattage").value);
+                            var sunHours = parseInt(document.getElementById("sunHours").value);
+                            var wattText = document.getElementById("answer");
+                            var panelText = document.getElementById("numPanels");
+                            var watts = 0;
+                            var panelWattage = 0;
+                            var numPanels = 0;
+                            var cost = 0;
+                            watts = Math.round(((wattage * 1000)/30 /sunHours));
+                            if(choice[0].checked == true){
+                                panelWattage = 250;
+                            } else{
+                                panelWattage = 370;
+                            }
+                            numPanels = Math.ceil(watts/panelWattage);
+                            wattText.innerHTML = "Wattage: "+ watts + " watts";
+                            panelText.innerHTML = "Number of Panels: " + numPanels;
+                            
+                        }
+                            function switchEnergy(){
+                                var energyChoice = document.getElementById("energy").value;
+                                var energyText = document.getElementById("wattageLabel").value;
+                                if(energyChoice.equals("Wind Energy")){
+                                    energyText.innerHTML="Wind Flowed: ";
+                                    console.log("yay");
+                                } else{
+                                console.log("boo");
+                                }
+                                console.log("wompWomp")
+                            }
+                        </script>
+
+                        
+                </div>
+            </div>
+        </body>
+    </html>
