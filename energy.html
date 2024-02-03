@@ -19,7 +19,7 @@
                     <a href = "about.html" class="pages">About</a>
                     <a href = "energy.html"class="pages">Energy</a>
                     <a href = "cost.html"class="pages">Cost</a>
-                    <a href = "practice.html"class="pages">Why are fossil fuels bad?</a>
+                    <a href = "practice.html"class="pages">Fossil Fuel's Harm</a>
                     <a href = "sources.html"class="pages">Sources</a>
                 </div>
             </header>
@@ -35,24 +35,29 @@
                         <h1 id="windHeader">Wind Energy</h1>
                     
                 <div>
-                    <div id="solarDescription">
+                    <div id="solarDescription" class="energiesDescription">
                         <p>Solar energy is the process of taking radiation from the sun which can produce heat and causes a chemical reaction within solar panels which produces electricity.</p>
     			<p>The total amount of solar energy able to be harnessed in the process exceeds the world’s current and anticipated energy requirements. If suitably harnessed, this highly widespread source has the potential to 			satisfy all future energy needs. Solar energy is said to become increasingly used as a green energy source for its unlimited supply and nonpolluting characteristics.</p>
     			<p>Solar radiation is light – also known as electromagnetic radiation – that is emitted by the sun. While every location on Earth receives some sunlight over a year, the amount of solar radiation that reaches any 			one spot on the Earth’s surface varies. Solar technologies capture this radiation and turn it into useful forms of energy.</p>
+                <img src="solar_icon.jpg" alt="solarIcon">
+            </div>
+                        
+		<div>
+                    <div id="windDescription" class="energiesDescription">
+                        <p>Wind energy is a form of renewable energy typically powered by the movement of wind across enormous fan-shaped structures called wind turbines. Once built, these turbines create no climate-warming greenhouse gases, making them a form of green energy. </p>
+                        <p>Once called windmills, the technology used to harness the power of wind has advanced significantly over the past ten years, with the United States increasing its wind power capacity 30% year over year. </p>
+                        <p>Wind turbines are simple in concept. Unlike using a fan which converts electricity into wind, turbines act in the opposite way in which wind spins the large propellors which powers a generator which converts the spin of the blades into a form of electricity. </p>
+                        <img src="wind_icon.png" alt="solarIcon">
                         </div>
                 </div>
 		<div>
-                    <div id="windDescription">
-                        <p>Solar energy is the process of taking radiation from the sun which can produce heat and causes a chemical reaction within solar panels which produces electricity.</p>
-    			<p>The total amount of solar energy able to be harnessed in the process exceeds the world’s current and anticipated energy requirements. If suitably harnessed, this highly widespread source has the potential to 			satisfy all future energy needs. Solar energy is said to become increasingly used as a green energy source for its unlimited supply and nonpolluting characteristics.</p>
-    			<p>Solar radiation is light – also known as electromagnetic radiation – that is emitted by the sun. While every location on Earth receives some sunlight over a year, the amount of solar radiation that reaches any 			one spot on the Earth’s surface varies. Solar technologies capture this radiation and turn it into useful forms of energy.</p>
-                        </div>
-                </div>
-		<div>
-                    <div id="hydroDescription">
-                        <p>Solar energy is the process of taking radiation from the sun which can produce heat and causes a chemical reaction within solar panels which produces electricity.</p>
-    			<p>The total amount of solar energy able to be harnessed in the process exceeds the world’s current and anticipated energy requirements. If suitably harnessed, this highly widespread source has the potential to 			satisfy all future energy needs. Solar energy is said to become increasingly used as a green energy source for its unlimited supply and nonpolluting characteristics.</p>
-    			<p>Solar radiation is light – also known as electromagnetic radiation – that is emitted by the sun. While every location on Earth receives some sunlight over a year, the amount of solar radiation that reaches any 			one spot on the Earth’s surface varies. Solar technologies capture this radiation and turn it into useful forms of energy.</p>
+                    <div id="hydroDescription" class="energiesDescription">
+                        <p>Also known as hydroelectric power, this type of green energy uses the flow of water in rivers, streams, dams or elsewhere to produce electricity. Hydropower can even work on a small scale using the flow of water through pipes in the home or can come from evaporation, rainfall or the tides in the oceans.</p>
+                        <p>Hydropower is the United States’ oldest source of green electricity. In 2022, hydropower accounted for 28.7% of U.S. renewable electricity generation. </p>
+                        <p>Hydropower’s flexibility allows it to seamlessly integrate other energy sources and act as a force multiplier for other renewables, and makes it an invaluable resource for powering the grid after an outage.</p>
+                        <p>U.S. conventional hydropower capacity increased 2.1 gigawatts (GW) from 2010 to 2022 due to a combination of upgrades to existing plants (1.6 GW), new projects (0.7 GW), and retirements (-0.2 GW). Hydropower generation (262 terrawatt-hours) represented 6.2% of total U.S. electricity generation and 28.7% of electricity from renewables in 2022. </p>
+                
+                <img src="hydroIcon.png" alt="solarIcon">
                         </div>
                 </div>
                 <script>
@@ -73,7 +78,7 @@
                             wind.style.opacity=0;
                             solar.style.animation="enlargen 1s 1";
                             solar.style.animationFillMode="forwards";
-			    soolar.style.opacity=1;
+			                soolar.style.display="block";
 
                         } else if(id=="windImage"){
                             solar.style.opacity=0;
@@ -81,7 +86,7 @@
 			    wind.style.color="white";
                             wind.style.animation="enlargen 1s 1";
                             wind.style.animationFillMode="forwards";
-			    wiind.style.opacity=1;
+			    wiind.style.display="block";
                         } else{
                             solar.style.opacity=0;
                             wind.style.opacity=0;
@@ -90,7 +95,7 @@
 			    hydro.style.textShadow = "1px 1px 2px black";
                             hydro.style.animation="enlargenLeft 1s linear 1";
                             hydro.style.animationFillMode="forwards";
-			    hyydro.style.opacity=1;
+			    hyydro.style.display="block";
 
                         }
                     }
